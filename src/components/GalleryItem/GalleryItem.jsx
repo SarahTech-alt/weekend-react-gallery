@@ -1,7 +1,7 @@
 
 import { useState } from 'axios';
 
-function galleryItem({ picture }) {
+function galleryItem({picture, key}) {
 
     const [itemDisplayed, setItemDisplayed] = useState(true);
 
