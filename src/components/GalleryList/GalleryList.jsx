@@ -1,13 +1,21 @@
+import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 
-
-function GalleryList (props) {
-    
+function GalleryList({ galleryArray }) {
+    console.log(galleryArray);
     return (
-        <div>
-        {props.galleryArray.map(picture => 
-            (<p key={picture.id}><img src={picture.path} alt={picture.description}/></p>)
-            )}
+        <>
+            <div>
+                {galleryArray.map(picture => (
+                    <div>
+                        <GalleryItem key={picture.id}
+                            picture={picture}
+                        />
+                    </div>
+                ))}
+
             </div>
+
+        </>
     );
 }
 
