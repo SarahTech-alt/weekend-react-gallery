@@ -3,11 +3,11 @@
 function GalleryList (props) {
     
     return (
-        <ul>
+        <div>
         {props.galleryArray.map(picture => 
-            (<li key={picture.id}>{picture.description}</li>)
+            (<p key={picture.id}><img src={picture.path} alt={picture.description}/></p>)
             )}
-            </ul>
+            </div>
     );
 }
 

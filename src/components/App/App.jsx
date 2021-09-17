@@ -19,7 +19,7 @@ function App() {
       url: '/gallery'
     }).then(response => {
       console.log('successfully got gallery items', response);
-      console.log(response);
+      console.log(response.data);
       setGalleryArray(response.data)
     }).catch(error => {
       console.log('there was an error getting gallery', error);
