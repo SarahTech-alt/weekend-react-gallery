@@ -1,13 +1,13 @@
 
 
-function GalleryList ({getGallery}) {
+function GalleryList (props) {
     
-    return(
-        <>
-        {getGallery.map(picture => 
-            (<li key = {picture.id}>{picture.description}</li>)
+    return (
+        <ul>
+        {props.galleryArray.map(picture => 
+            (<li key={picture.id}>{picture.description}</li>)
             )}
-        </>
+            </ul>
     );
 }
 

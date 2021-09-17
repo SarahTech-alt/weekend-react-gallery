@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import galleryItem from '../GalleryItem/GalleryItem';
-import galleryList from '../GalleryList/GalleryList';
+import GalleryList from '../GalleryList/GalleryList';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     getGallery();
   }, []);
 
-  const [galleryList, setGalleryList] = useState([])
+  const [galleryArray, setGalleryArray] = useState([])
 
   const getGallery = () => {
     axios({
@@ -20,6 +20,7 @@ function App() {
     }).then(response => {
       console.log('successfully got gallery items', response);
       console.log(response);
+      setGalleryArray(response.data)
     }).catch(error => {
       console.log('there was an error getting gallery', error);
     })
@@ -32,7 +33,7 @@ function App() {
       </header>
       <p>Gallery goes here</p>
       <img src="images/goat_small.jpg" />
-      <galleryList getGallery = {getGallery} />
+      <GalleryList galleryArray={galleryArray} />
     </div>
   );
 }
