@@ -1,28 +1,31 @@
+import { useState } from 'react';
 
-import { useState } from 'axios';
+function GalleryItem({picture}) {
 
-function galleryItem({picture, key}) {
-
-    const [itemDisplayed, setItemDisplayed] = useState(true);
-
+    const [isDisplayed, setIsDisplayed] = useState(true);
 
     return (
-        <>
+       
+
+        <div>
             {
-                itemDisplayed ? (
+                isDisplayed ? (
                     <>
-                        <img src={picture.path} onClick={() => setItemDisplayed(false)} />
+                    <img src={picture.path} onClick={()=>
+                    setIsDisplayed(false)}/>
                     </>
                 ) : (
+                    // else
                     <>
-                    <p onClick={() => setItemDisplayed(true)}>{picture.description}</p>
-                     </>
-    )}
-        </>
+                    <p onClick={() => setIsDisplayed(true)}>picture.description</p>
+                    </>
+                )
+            }
+            <br />
+            <button>Like</button>
+            <hr />
+        </div>
     )
 }
 
-
-//change rendering here 
-
-export default galleryItem;
+export default GalleryItem;

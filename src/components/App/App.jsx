@@ -10,6 +10,8 @@ function App() {
     getGallery();
   }, []);
 
+  const [itemDisplayed, setItemDisplayed] = useState(false);
+
   const [galleryArray, setGalleryArray] = useState([])
 
   const getGallery = () => {
@@ -31,8 +33,9 @@ function App() {
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
       <p>Gallery goes here</p>
-      <img src="images/goat_small.jpg" />
-      <GalleryList galleryArray={galleryArray} />
+      {/* <img src="images/goat_small.jpg" /> */}
+      <GalleryList galleryArray={galleryArray} 
+      setItemDisplayed = {setItemDisplayed}/>
     </div>
   );
 }

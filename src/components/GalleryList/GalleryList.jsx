@@ -8,7 +8,8 @@ function GalleryList({ galleryArray }) {
             <div>
                 {galleryArray.map(picture => (
                     
-                        <GalleryItem key={picture.id}
+                        <GalleryItem 
+                            key={picture.id}
                             picture={picture}
                         />
                    
