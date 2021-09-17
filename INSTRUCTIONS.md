@@ -43,8 +43,8 @@ To practice passing values through `props` in React, you will build the gallery 
 ![mockup two](wireframes/second-mockup.png)
 
 ### Task List
-=[ ] Add components App, GalleryList and GalleryItem
--[ ] Source them into app.jsx
+=[x] Add components App, GalleryList and GalleryItem
+-[x] Source them into app.jsx
 -[ ] Create GET method in App.jsx to get data from gallery.data
 -[ ] In GalleryList component get props data from App.jsx and iterate to make gallery items
 -[ ] In GalleryItem component get props from App.jsx for one item
