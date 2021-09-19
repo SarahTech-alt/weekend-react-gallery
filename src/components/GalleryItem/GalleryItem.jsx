@@ -7,23 +7,25 @@ function GalleryItem({picture}) {
     return (
        
 
-        <div>
+        <div class = "items-displayed">
             {
                 isDisplayed ? (
-                    <>
+                    <div class = "display">
                     <img src={picture.path} onClick={()=>
-                    setIsDisplayed(false)}/>
-                    </>
+                    setIsDisplayed(false)}/>  <br />
+                    <button>Like</button>
+                    </div>
                 ) : (
                     // else
-                    <>
-                    <p onClick={() => setIsDisplayed(true)}>picture.description</p>
-                    </>
+                    <div class = "display">
+                    <p onClick={() => setIsDisplayed(true)}>{picture.description}</p> <br />
+                    <button>Like</button>
+                    </div>
                 )
             }
-            <br />
-            <button>Like</button>
-            <hr />
+          
+            
+       
         </div>
     )
 }
