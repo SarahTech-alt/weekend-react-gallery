@@ -52,7 +52,7 @@ To practice passing values through `props` in React, you will build the gallery 
     - [x] Display the number of likes for each item
     - [x] Add a 'like' button
     - [x] Create a PUT method to update the like count 'gallery/like/:id'
-    - [ ] Update the gallery each time a like button is clicked by calling PUT method
+    - [x] Update the gallery each time a like button is clicked by calling PUT method
 
 
 - Use `axios` to retrieve (`GET`) data from to `/gallery` and store it in `App.jsx`.
