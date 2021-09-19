@@ -25,8 +25,8 @@ function GalleryItem({picture, getGallery}) {
             {
                 isDisplayed ? (
                     <div className = "item">
-                    <img src={picture.path} onClick={()=>
-                    setIsDisplayed(false)}/>  <br />
+                    <img alt={picture.description} src={picture.path} onClick={()=>
+                    setIsDisplayed(false)}/>  <br /> <br />
                      <button onClick={() => getLikes(picture.id)}>Like</button><br />
                     <p className = "likes">This picture has been liked {picture.likes} times</p>
                     </div>
