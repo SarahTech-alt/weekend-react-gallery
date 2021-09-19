@@ -3,23 +3,26 @@ import { useState } from 'react';
 function GalleryItem({picture}) {
 
     const [isDisplayed, setIsDisplayed] = useState(true);
+    const [likeCounter, setLikeCounter] = useState(0);
 
     return (
        
 
-        <div class = "items-displayed">
+        <div class = "container">
             {
                 isDisplayed ? (
-                    <div class = "display">
+                    <div class = "item">
                     <img src={picture.path} onClick={()=>
                     setIsDisplayed(false)}/>  <br />
-                    <button>Like</button>
+                     <button onClick={() => setLikeCounter(likeCounter+1)}>Like</button><br />
+                    This picture has been liked {likeCounter} times
                     </div>
                 ) : (
                     // else
-                    <div class = "display">
+                    <div class = "item">
                     <p onClick={() => setIsDisplayed(true)}>{picture.description}</p> <br />
-                    <button>Like</button>
+                    <button onClick={() => setLikeCounter(likeCounter+1)}>Like</button>
+                    <p>This picture has been liked {likeCounter}</p>
                     </div>
                 )
             }

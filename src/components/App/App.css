@@ -13,7 +13,27 @@
   font-size: 1.5em;
 }
 
-.display {
-  max-width: 33%;
+
+/* Styles from https://codepen.io/andradewall/pen/xNpPde?css-preprocessor=scss */
+.container {
+	background-color: #eee;
+	width: 1000px;
+	margin: 30px auto;
+	
+	display: grid;
+	grid-template-rows: 150px 150px;
+	grid-template-columns: 150px 150px 150px;
+	
+	//grid-row-gap: 30px;
+	//grid-column-gap: 30px;
+	grid-gap: 30px;
 }
 
+.item {
+	padding: 20px;
+	font-size: 20px;
+	font-family: sans-serif;
+	color: black;
+	
+
+}
