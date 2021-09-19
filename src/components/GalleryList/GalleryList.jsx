@@ -3,17 +3,18 @@ import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 
 
 
-function GalleryList({ galleryArray }) {
+function GalleryList({ galleryArray, getGallery }) {
     console.log(galleryArray);
 
     return (
         <>
-            <div>
+            <div className ="container">
                 {galleryArray.map(picture => (
                     
                         <GalleryItem 
                             key={picture.id}
                             picture={picture}
+                            getGallery={getGallery}
                         />
                    
                 ))}

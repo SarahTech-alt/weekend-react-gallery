@@ -45,14 +45,14 @@ To practice passing values through `props` in React, you will build the gallery 
 ### Task List
 =[x] Add components App, GalleryList and GalleryItem
 -[x] Source them into app.jsx
--[ ] Create GET method in App.jsx to get data from gallery.data
--[ ] In GalleryList component get props data from App.jsx and iterate to make gallery items
--[ ] In GalleryItem component get props from App.jsx for one item
-    - [ ] Create a click handler that switches the item to a description with conditional rendering
-    - [ ] Display the number of likes for each item
-    - [ ] Add a 'like' button
-    - [ ] Create a PUT method to update the like count 'gallery/like/:id'
-    - [ ] Update the gallery each time a like button is clicked by calling GET method
+-[x] Create GET method in App.jsx to get data from gallery.data
+-[x] In GalleryList component get props data from App.jsx and iterate to make gallery items
+-[x] In GalleryItem component get props from App.jsx for one item
+    - [x] Create a click handler that switches the item to a description with conditional rendering
+    - [x] Display the number of likes for each item
+    - [x] Add a 'like' button
+    - [x] Create a PUT method to update the like count 'gallery/like/:id'
+    - [ ] Update the gallery each time a like button is clicked by calling PUT method
 
 
 - Use `axios` to retrieve (`GET`) data from to `/gallery` and store it in `App.jsx`.

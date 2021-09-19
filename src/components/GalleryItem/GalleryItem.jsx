@@ -1,28 +1,41 @@
 import { useState } from 'react';
+import axios from 'axios';
 
-function GalleryItem({picture}) {
+function GalleryItem({picture, getGallery}) {
 
     const [isDisplayed, setIsDisplayed] = useState(true);
-    const [likeCounter, setLikeCounter] = useState(0);
+   
+
+    const getLikes = (pictureId) => {
+        axios({
+            method: 'PUT',
+            url: `/gallery/like/${pictureId}`
+          }).then(response => {
+              console.log('success updating likes');
+          }).catch(response => {
+              console.log('there was an error updating likes', error);
+          })
+          getGallery();
+    }
 
     return (
        
 
-        <div class = "container">
+        <div>
             {
                 isDisplayed ? (
-                    <div class = "item">
+                    <div className = "item">
                     <img src={picture.path} onClick={()=>
                     setIsDisplayed(false)}/>  <br />
-                     <button onClick={() => setLikeCounter(likeCounter+1)}>Like</button><br />
-                    This picture has been liked {likeCounter} times
+                     <button onClick={() => getLikes(picture.id)}>Like</button><br />
+                    <p className = "likes">This picture has been liked {picture.likes} times</p>
                     </div>
                 ) : (
                     // else
-                    <div class = "item">
+                    <div className = "item">
                     <p onClick={() => setIsDisplayed(true)}>{picture.description}</p> <br />
-                    <button onClick={() => setLikeCounter(likeCounter+1)}>Like</button>
-                    <p>This picture has been liked {likeCounter}</p>
+                    <button onClick={() => getLikes(picture.id)}>Like</button>
+                    <p className = "likes">This picture has been liked {picture.likes}</p>
                     </div>
                 )
             }
