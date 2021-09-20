@@ -8,15 +8,15 @@ function GalleryList({ galleryArray, getGallery }) {
 
     return (
         <>
-            <div className ="container">
+            <div className="container">
                 {galleryArray.map(picture => (
-                    
-                        <GalleryItem 
-                            key={picture.id}
-                            picture={picture}
-                            getGallery={getGallery}
-                        />
-                   
+
+                    <GalleryItem
+                        key={picture.id}
+                        picture={picture}
+                        getGallery={getGallery}
+                    />
+
                 ))}
 
             </div>
