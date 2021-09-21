@@ -25,13 +25,27 @@
 	grid-template-rows:50% 50%;
 	grid-template-columns: 33% 33% 33%;
 	grid-gap: 5px;
+	
 }
 
 .item {
-	padding: 20px;
+	padding: 5px;
 	font-size: 20px;
 	font-family: sans-serif;
 	color: black;
+	float: left;
+
+}
+img {
+	cursor: pointer;
+}
+
+.description {
+	cursor: pointer;
+	
+	display: flex;
+	justify-content: center;
+	transform: translate(0%,50%)
 }
 
 

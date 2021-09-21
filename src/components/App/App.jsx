@@ -10,11 +10,12 @@ function App() {
   useEffect(() => {
     getGallery();
   }, []);
-
-  const [itemDisplayed, setItemDisplayed] = useState(false);
-
+// initiate a variable to hold the gallery 
+// from the get request and to use throughout the app
   const [galleryArray, setGalleryArray] = useState([])
 
+  // get the gallery information from the router
+  // input into galleryArray
   const getGallery = () => {
     axios({
       method: 'GET',
@@ -34,8 +35,11 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
+      {/* {JSON.stringify(galleryArray)}> */}
+      {/* Display GalleryList return here
+      send galleryArray and getGallery 
+      for components to use */}
       <GalleryList galleryArray={galleryArray}
-        setItemDisplayed={setItemDisplayed}
         getGallery={getGallery} />
     </div>
   );
