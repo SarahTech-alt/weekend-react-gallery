@@ -31,7 +31,7 @@ function GalleryItem({ picture, getGallery }) {
                     <div className="item">
                         <img alt={picture.description} src={picture.path} onClick={() =>
                             setIsDisplayed(false)} />  <br /> <br />
-                        <button onClick={() => getLikes(picture.id)}>Like</button><br />
+                        <button onClick={() => likePicture(picture.id)}>Like</button><br />
                         <p className="likes">This picture has been liked {picture.likes} times</p>
                     </div>
                 ) : (
